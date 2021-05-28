@@ -39,10 +39,9 @@ fun getBirthday(): Int {
 }
 
 fun runFortuneUntilFindTheSelectOne() {
-    var fortune: String
-    for (i in 1..10) {
+    var fortune: String = ""
+   while (!fortune.contains("Take it easy")) {
         fortune = getFortuneCookie(getBirthday())
         println("You fortune is: ${fortune}")
-        if (fortune.contains("Take it easy")) break
     }
 }

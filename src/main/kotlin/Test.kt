@@ -28,3 +28,7 @@ fun main(args: Array<String>) {
     val message = "You are ${ if (temperature > 50) "fried" else "safe"} fish"
     println(message)
 }
+
+fun canAddMoreFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasDecoration: Boolean = true): Boolean{
+    return (tankSize * if (hasDecoration) 0.8 else 1.0) >= (currentFish.sum() + fishSize)
+}
