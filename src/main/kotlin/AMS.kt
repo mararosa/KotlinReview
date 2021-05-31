@@ -95,10 +95,7 @@ fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
 fun dirtyProcessor() {
     dirty = updateDirty(dirty, waterFilter)
     dirty = updateDirty(dirty, ::feedFish)
-    dirty = updateDirty(dirty, { dirty ->
-        dirty + 50
-    })
-
+    dirty = updateDirty(dirty) { dirty -> dirty + 50 }
 }
 
 fun feedTheFish() {

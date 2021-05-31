@@ -1,3 +1,4 @@
+
 import java.util.*
 
 fun dayOfWeek(){
@@ -16,19 +17,32 @@ fun dayOfWeek(){
 }
 
 fun main(args: Array<String>) {
-    dayOfWeek()
+//    dayOfWeek()
+//
+//    val isUnit = println("This is an expression")
+//    println(isUnit)
+//
+//    val temperature = 10
+//    val isHot = if (temperature > 50) true else false //Value of if expression
+//    println(isHot)
+//
+//    val message = "You are ${ if (temperature > 50) "fried" else "safe"} fish"
+//    println(message)
 
-    val isUnit = println("This is an expression")
-    println(isUnit)
+    gamePlay(rollDice2(22))
 
-    val temperature = 10
-    val isHot = if (temperature > 50) true else false //Value of if expression
-    println(isHot)
-
-    val message = "You are ${ if (temperature > 50) "fried" else "safe"} fish"
-    println(message)
 }
 
 fun canAddMoreFish(tankSize: Double, currentFish: List<Int>, fishSize: Int = 2, hasDecoration: Boolean = true): Boolean{
     return (tankSize * if (hasDecoration) 0.8 else 1.0) >= (currentFish.sum() + fishSize)
+}
+
+val rollDice = { side: Int -> if (side == 0)  0 else Random().nextInt(side) + 1}
+val rollDice2: (Int) -> Int = { side ->
+    if (side == 0) 0
+    else Random().nextInt(side) + 1
+}
+
+fun gamePlay(diceRoll: Int) {
+    println(diceRoll)
 }
