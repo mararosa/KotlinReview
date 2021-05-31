@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
 //    val message = "You are ${ if (temperature > 50) "fried" else "safe"} fish"
 //    println(message)
 
-    gamePlay(rollDice2(22))
+    gamePlay(rollDice2(0))
 
 }
 
